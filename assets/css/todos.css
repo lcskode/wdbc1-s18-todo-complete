@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* this background gradient is generated @ uigradients.com */
+  background: #1c92d2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: 'Roboto', sans-serif; /* specify font to be used */
+}
+
+#container {
+  width: 360px;
+  margin: 100px auto; /* placed container div at center and puts 100px margin top and bottom */
+  background: #f7f7f7;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* gives a light shadow under the box */
+}
+
+h1 {
+  background: #2980b9;
+  color: white;
+  margin: 0;
+  padding: 10px 20px; /* 10px top and bottom, 20px left and right */
+  text-transform: uppercase; /* capitalize all letters */
+  font-size: 24px;
+  font-weight: normal; /* removes h1 emphasis */ 
+}
+
+ul {
+  list-style: none; /* removes bullet point on lis */
+  margin: 0;
+  padding: 0; /* removes spaces on all corners of lis */
+}
+
+li {
+  background: #fff;
+  height: 40px; /* put spaces on every lis */
+  line-height: 40px; /* sets text at horizontal middle */
+  color: #666;
+}
+
+/* this will paint a shade of gray to every other lis */
+li:nth-child(2n) {
+  background: #f7f7f7; 
+}
+
+span {
+  background: #e74c3c;
+  height: 40px;
+  margin-right: 20px; /* indents li text content slightly to the right */
+  text-align: center;
+  color: white;
+  width: 0px; 
+  display: inline-block; /* has something to do with forming and centering the bin icon */
+  transition: 0.15s linear; /* makes bin icon animate popping out from left to right */
+  opacity: 0; /* removes or hides the bin icon */
+}
+
+li:hover span {
+  width: 40px; /* set max width of bin icon to show */
+  opacity: 1.0; /* shows the bin icon */
+}
+
+input {
+  font-size: 18px;
+  color: #2980b9;
+  background-color: #f7f7f7;
+  width: 100%; /* takes up the whole width space */
+  padding: 13px 13px 13px 20px;
+  box-sizing: border-box; /* width and height props include the padding and border, but not the margin */
+  border: 3px solid rgba(0, 0, 0, 0); /* gives invisible border to remove shadow-like border at the input */
+}
+
+input:focus {
+  background: #fff;
+  border: 3px solid #2980b9;
+  outline: none;
+}
+
+/* REMOVES PLACEHOLDER TEXT WHEN INPUT ON FOCUS */
+::-webkit-input-placeholder { opacity: 1; -webkit-transition: opacity .1s; transition: opacity .1s; }  /* Chrome <=56, Safari < 10 */
+:-moz-placeholder { opacity: 1; -moz-transition: opacity .1s; transition: opacity .1s; } /* FF 4-18 */
+::-moz-placeholder { opacity: 1; -moz-transition: opacity .1s; transition: opacity .1s; } /* FF 19-51 */
+:-ms-input-placeholder { opacity: 1; -ms-transition: opacity .1s; transition: opacity .1s; } /* IE 10+ */
+::placeholder { opacity: 1; transition: opacity .1s; } /* Modern Browsers */
+
+*:focus::-webkit-input-placeholder { opacity: 0; } /* Chrome <=56, Safari < 10 */
+*:focus:-moz-placeholder { opacity: 0; } /* FF 4-18 */
+*:focus::-moz-placeholder { opacity: 0; } /* FF 19-50 */
+*:focus:-ms-input-placeholder { opacity: 0; } /* IE 10+ */
+*:focus::placeholder { opacity: 0; } /* Modern Browsers */
+/* ============================================= */
+
+.fa-plus {
+  float: right; /* moves plus icon to the right */
+}
+
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}
